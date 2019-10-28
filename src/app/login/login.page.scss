@@ -1,0 +1,88 @@
+ion-content {
+    --overflow: hidden;
+}
+
+#main {
+    height: 100%;
+    background: rgb(244,165,22);
+    background: linear-gradient(0deg, rgba(244,165,22,0.8757878151260504) 0%, rgba(255,255,255,0.48082983193277307) 45%);
+}
+
+#logoGarag{
+    width: 95%;
+    float: left;
+    margin-left: 15px;
+    text-align: center;
+    margin-top: 5%;
+    height: 210px;
+}
+
+h1{
+    font:bold 16px Verdana, Arial;
+    color: rgb(158, 129, 49);
+    margin-left: 10px
+}
+
+#createAccount{
+    width: 80%;
+    float: left;
+    margin-left: 10%;
+}
+
+#facebookAccount{
+     width: 80%;
+    float: left;
+    margin-left: 10%;
+    margin-top: 18px
+}
+
+.shadow-button{
+        box-shadow: 0px 14px 25px rgba(107, 82, 13, 0.59);
+        border-radius: 50px;
+ }
+
+.ion-color-create {
+  --ion-color-base: #f0b000;
+  --ion-color-base-rgb: 240, 176, 0;
+  --ion-color-contrast: #08070773;
+  --ion-color-contrast-rgb: 0, 0, 0;
+  --ion-color-shade: #d39b00;
+  --ion-color-tint: #f2b81a
+}
+
+.ion-color-fase {
+  --ion-color-base: #f08a04;
+  --ion-color-base-rgb: 240, 176, 0;
+  --ion-color-contrast: #08070773;
+  --ion-color-contrast-rgb: 0, 0, 0;
+  --ion-color-shade: #d39b00;
+  --ion-color-tint: #f2b81a
+}
+
+#iconPolitica{
+    width: 35px;
+    height: 35px;
+    margin-top: 5px;
+    float: left;
+    margin-left: 15px;
+    color:green;
+    font-size:25px;
+}
+#termosPolitica{
+    width: 95%px;
+    height: 20px;
+    margin-top: 10px;
+    float: left;
+    margin-left: 5px;
+    text-align: center;
+    font: 11px Verdana, Arial;
+}
+
+#termos{
+    width: 95%;
+    margin-left: 10px;
+    margin-top: 20px;
+    float: left;
+    text-align: justify;
+    font:12px Verdana,Arial;
+}
