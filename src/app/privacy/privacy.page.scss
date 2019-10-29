@@ -1,0 +1,25 @@
+ion-header{
+    background-image: url("../../assets/img/bannerTop.png");
+    background-repeat: no-repeat;
+    background-size: cover;
+    height: 100px
+}
+
+.closeButton{
+    width: 99%;
+    height: 30px;
+    text-align: right;
+    margin-top: 15px;
+    margin-right: 5px
+}
+
+.colorButton{
+    color:#000000;
+}
+
+h1{
+    font: bold 20px Verdana, Arial;
+    color: rgb(161, 160, 160);
+    margin-left: 15px;
+    margin-top: 20px;
+}
