@@ -15,3 +15,7 @@ Start the .gitpod.yml installation\n
 Install Android SDK \n
 Setting bash files to be runnable\n
 Starting Apache\n
+Start the .gitpod.yml installation\n
+Install Android SDK \n
+Setting bash files to be runnable\n
+Starting Apache\n
