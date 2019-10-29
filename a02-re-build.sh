@@ -29,7 +29,7 @@ cordova build android --no-telemetry
 
 
 # backup old .apk
-cp /workspace/garag/public/$wow4-app-debug.apk /workspace/garag/public/$wow4-backup-app-debug.apk
+cp /workspace/garag/public/$wow4-app-debug.apk /workspace/my-gitpod-dockerfile-cordova/public/$wow4-backup-app-debug.apk
 
 #copy new .apk to the public folder
 cp /workspace/garag/$wow4/platforms/android/app/build/outputs/apk/debug/app-debug.apk /workspace/garag/public/$wow4-app-debug.apk

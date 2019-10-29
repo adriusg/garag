@@ -29,11 +29,10 @@ cordova build android --no-telemetry
 
 
 
-cp /workspace/garag/$wow4/platforms/android/app/build/outputs/apk/debug/app-debug.apk /workspace/garag/public/$wow4-app-debug.apk
+cp /workspace/my-gitpod-dockerfile-cordova/$wow4/platforms/android/app/build/outputs/apk/debug/app-debug.apk /workspace/garag/public/$wow4-app-debug.apk
 
 
-cp /workspace/garag/$wow4/platforms/android/app/build/outputs/apk/debug/app-debug.apk /workspace/garag/public/$wow4-app-debug.apk
-garagdsfsdsdfsddsfdsfsdfsdfsdfsdffssdfdsfsdfsdfsdfsdfsdfsdfdsfdssddssdfdsgaraggarag
+
 qrcode -o /workspace/garag/public/qrout.png $(gp url 8001);
 echo "<br><img src='qrout.png'><br>" >> /workspace/garag/public/index.html
 
