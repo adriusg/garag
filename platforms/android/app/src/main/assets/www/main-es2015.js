@@ -8,7 +8,8 @@
 /***/ (function(module, exports, __webpack_require__) {
 
 var map = {
-	"./login/login.module": "./src/app/login/login.module.ts"
+	"./login/login.module": "./src/app/login/login.module.ts",
+	"./privacy/privacy.module": "./src/app/privacy/privacy.module.ts"
 };
 
 function webpackAsyncContext(req) {
@@ -460,7 +461,18 @@ module.exports = "<ion-app>\n  <ion-router-outlet></ion-router-outlet>\n</ion-ap
 /*! no static exports found */
 /***/ (function(module, exports) {
 
-module.exports = "\n<ion-content>\n <div id=\"main\">\n    <div id=\"logoGarag\">\n         <img src=\"../../assets/img/logo2.png\" width=\"200px\" height=\"100px\"/>\n          <br /><br />\n          <h1>Dinheiro extra com sua Garagem.</h1>\n    </div>\n\n\n<div id=\"createAccount\">\n     <section>\n         <ion-button class=\"shadow-button\" expand=\"block\" shape=\"round\" color=\"create\"><strong>Crie sua Conta</strong></ion-button>\n      </section>\n  </div>\n\n\n<div id=\"facebookAccount\">\n     <section>\n         <ion-button class=\"shadow-button\" expand=\"block\" shape=\"round\" color=\"fase\">\n         <ion-icon ios=\"logo-facebook\" md=\"logo-facebook\"></ion-icon>\n          <strong> Continue com o Facebook</strong></ion-button>\n      </section>\n  </div>\n\n\n  </div>\n</ion-content>\n<ion-footer no-shadow>\n\t<ion-toolbar position=\"bottom\">\n    <div id=\"iconPolitica\">\n    <ion-icon name=\"checkmark-circle\" size=\"medium\"></ion-icon>\n    </div>\n\n\t\t<div id=\"termosPolitica\">\n       <a href=\"\"> Aceito os Termos e Condições e a Política de Privacidade.</a>\n        </div>\n\t</ion-toolbar>\n</ion-footer>\n"
+module.exports = "\n<ion-content>\n <div id=\"main\">\n    <div id=\"logoGarag\">\n\n          <div class=\"ajustLogo\"> <img src=\"../../assets/img/logo2.png\" width=\"200px\" height=\"100px\"/></div>\n\n         <div class=\"ajustH1\"> <h1>Dinheiro extra com sua Garagem.</h1></div>\n    </div>\n\n\n<div id=\"createAccount\">\n     <section>\n         <ion-button class=\"shadow-button\" expand=\"block\" shape=\"round\" color=\"create\"><strong>Crie sua Conta</strong></ion-button>\n      </section>\n  </div>\n\n\n<div id=\"facebookAccount\">\n     <section>\n         <ion-button class=\"shadow-button\" expand=\"block\" shape=\"round\" color=\"fase\">\n         <ion-icon ios=\"logo-facebook\" md=\"logo-facebook\"></ion-icon>\n          <strong> Continue com o Facebook</strong></ion-button>\n      </section>\n  </div>\n\n\n  </div>\n</ion-content>\n<ion-footer no-shadow>\n\t<ion-toolbar position=\"bottom\">\n    <div id=\"iconPolitica\">\n    <ion-icon name=\"checkmark-circle\" size=\"medium\"></ion-icon>\n    </div>\n\n\t\t<div id=\"termosPolitica\">\n       <a (click)=\"movePrivacy()\"> Aceito os Termos e Condições e a Política de Privacidade.</a>\n        </div>\n\t</ion-toolbar>\n</ion-footer>\n"
+
+/***/ }),
+
+/***/ "./node_modules/raw-loader/index.js!./src/app/privacy/privacy.page.html":
+/*!*********************************************************************!*\
+  !*** ./node_modules/raw-loader!./src/app/privacy/privacy.page.html ***!
+  \*********************************************************************/
+/*! no static exports found */
+/***/ (function(module, exports) {
+
+module.exports = "<ion-header  no-border>\n <div class=\"closeButton\" (click)=\"closeModal()\">\n    <ion-icon name=\"close\" style=\"zoom:2.0;\" class=\"colorButton\"></ion-icon>\n </div>\n</ion-header>\n\n<ion-content>\n<h1>Termos e Condições de Uso da Plataforma \"Mobile Garage\"</h1>\n</ion-content>\n"
 
 /***/ }),
 
@@ -483,7 +495,8 @@ __webpack_require__.r(__webpack_exports__);
 const routes = [
     { path: '', redirectTo: 'login', pathMatch: 'full' },
     { path: '', loadChildren: () => __webpack_require__.e(/*! import() | tabs-tabs-module */ "tabs-tabs-module").then(__webpack_require__.bind(null, /*! ./tabs/tabs.module */ "./src/app/tabs/tabs.module.ts")).then(m => m.TabsPageModule) },
-    { path: 'login', loadChildren: './login/login.module#LoginPageModule' }
+    { path: 'login', loadChildren: './login/login.module#LoginPageModule' },
+    { path: 'privacy', loadChildren: './privacy/privacy.module#PrivacyPageModule' }
 ];
 let AppRoutingModule = class AppRoutingModule {
 };
@@ -585,6 +598,8 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _app_routing_module__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(/*! ./app-routing.module */ "./src/app/app-routing.module.ts");
 /* harmony import */ var _app_component__WEBPACK_IMPORTED_MODULE_8__ = __webpack_require__(/*! ./app.component */ "./src/app/app.component.ts");
 /* harmony import */ var _login_login_module__WEBPACK_IMPORTED_MODULE_9__ = __webpack_require__(/*! ./login/login.module */ "./src/app/login/login.module.ts");
+/* harmony import */ var _privacy_privacy_module__WEBPACK_IMPORTED_MODULE_10__ = __webpack_require__(/*! ./privacy/privacy.module */ "./src/app/privacy/privacy.module.ts");
+
 
 
 
@@ -601,7 +616,7 @@ AppModule = tslib__WEBPACK_IMPORTED_MODULE_0__["__decorate"]([
     Object(_angular_core__WEBPACK_IMPORTED_MODULE_1__["NgModule"])({
         declarations: [_app_component__WEBPACK_IMPORTED_MODULE_8__["AppComponent"]],
         entryComponents: [],
-        imports: [_angular_platform_browser__WEBPACK_IMPORTED_MODULE_2__["BrowserModule"], _ionic_angular__WEBPACK_IMPORTED_MODULE_4__["IonicModule"].forRoot(), _app_routing_module__WEBPACK_IMPORTED_MODULE_7__["AppRoutingModule"], _login_login_module__WEBPACK_IMPORTED_MODULE_9__["LoginPageModule"]],
+        imports: [_angular_platform_browser__WEBPACK_IMPORTED_MODULE_2__["BrowserModule"], _ionic_angular__WEBPACK_IMPORTED_MODULE_4__["IonicModule"].forRoot(), _app_routing_module__WEBPACK_IMPORTED_MODULE_7__["AppRoutingModule"], _login_login_module__WEBPACK_IMPORTED_MODULE_9__["LoginPageModule"], _privacy_privacy_module__WEBPACK_IMPORTED_MODULE_10__["PrivacyPageModule"]],
         providers: [
             _ionic_native_status_bar_ngx__WEBPACK_IMPORTED_MODULE_6__["StatusBar"],
             _ionic_native_splash_screen_ngx__WEBPACK_IMPORTED_MODULE_5__["SplashScreen"],
@@ -670,7 +685,7 @@ LoginPageModule = tslib__WEBPACK_IMPORTED_MODULE_0__["__decorate"]([
 /*! no static exports found */
 /***/ (function(module, exports) {
 
-module.exports = "ion-content {\n  --overflow: hidden;\n}\n\n#main {\n  height: 100%;\n  background: #f4a516;\n  background: -webkit-gradient(linear, left bottom, left top, from(rgba(244, 165, 22, 0.8757878151)), color-stop(45%, rgba(255, 255, 255, 0.4808298319)));\n  background: linear-gradient(0deg, rgba(244, 165, 22, 0.8757878151) 0%, rgba(255, 255, 255, 0.4808298319) 45%);\n}\n\n#logoGarag {\n  width: 95%;\n  float: left;\n  margin-left: 15px;\n  text-align: center;\n  margin-top: 5%;\n  height: 210px;\n}\n\nh1 {\n  font: bold 16px Verdana, Arial;\n  color: #9e8131;\n  margin-left: 10px;\n}\n\n#createAccount {\n  width: 80%;\n  float: left;\n  margin-left: 10%;\n}\n\n#facebookAccount {\n  width: 80%;\n  float: left;\n  margin-left: 10%;\n  margin-top: 18px;\n}\n\n.shadow-button {\n  box-shadow: 0px 14px 25px rgba(107, 82, 13, 0.59);\n  border-radius: 50px;\n}\n\n.ion-color-create {\n  --ion-color-base: #f0b000;\n  --ion-color-base-rgb: 240, 176, 0;\n  --ion-color-contrast: #08070773;\n  --ion-color-contrast-rgb: 0, 0, 0;\n  --ion-color-shade: #d39b00;\n  --ion-color-tint: #f2b81a ;\n}\n\n.ion-color-fase {\n  --ion-color-base: #f08a04;\n  --ion-color-base-rgb: 240, 176, 0;\n  --ion-color-contrast: #08070773;\n  --ion-color-contrast-rgb: 0, 0, 0;\n  --ion-color-shade: #d39b00;\n  --ion-color-tint: #f2b81a ;\n}\n\n#iconPolitica {\n  width: 35px;\n  height: 35px;\n  margin-top: 5px;\n  float: left;\n  margin-left: 15px;\n  color: green;\n  font-size: 25px;\n}\n\n#termosPolitica {\n  width: 95% px;\n  height: 20px;\n  margin-top: 10px;\n  float: left;\n  margin-left: 5px;\n  text-align: center;\n  font: 11px Verdana, Arial;\n}\n\n#termos {\n  width: 95%;\n  margin-left: 10px;\n  margin-top: 20px;\n  float: left;\n  text-align: justify;\n  font: 12px Verdana, Arial;\n}\n/*# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbIi93b3Jrc3BhY2UvZ2FyYWcvc3JjL2FwcC9sb2dpbi9sb2dpbi5wYWdlLnNjc3MiLCJzcmMvYXBwL2xvZ2luL2xvZ2luLnBhZ2Uuc2NzcyJdLCJuYW1lcyI6W10sIm1hcHBpbmdzIjoiQUFBQTtFQUNJLGtCQUFBO0FDQ0o7O0FERUE7RUFDSSxZQUFBO0VBQ0EsbUJBQUE7RUFDQSx1SkFBQTtFQUFBLDZHQUFBO0FDQ0o7O0FERUE7RUFDSSxVQUFBO0VBQ0EsV0FBQTtFQUNBLGlCQUFBO0VBQ0Esa0JBQUE7RUFDQSxjQUFBO0VBQ0EsYUFBQTtBQ0NKOztBREVBO0VBQ0ksOEJBQUE7RUFDQSxjQUFBO0VBQ0EsaUJBQUE7QUNDSjs7QURFQTtFQUNJLFVBQUE7RUFDQSxXQUFBO0VBQ0EsZ0JBQUE7QUNDSjs7QURFQTtFQUNLLFVBQUE7RUFDRCxXQUFBO0VBQ0EsZ0JBQUE7RUFDQSxnQkFBQTtBQ0NKOztBREVBO0VBQ1EsaURBQUE7RUFDQSxtQkFBQTtBQ0NSOztBREVBO0VBQ0UseUJBQUE7RUFDQSxpQ0FBQTtFQUNBLCtCQUFBO0VBQ0EsaUNBQUE7RUFDQSwwQkFBQTtFQUNBLDBCQUFBO0FDQ0Y7O0FERUE7RUFDRSx5QkFBQTtFQUNBLGlDQUFBO0VBQ0EsK0JBQUE7RUFDQSxpQ0FBQTtFQUNBLDBCQUFBO0VBQ0EsMEJBQUE7QUNDRjs7QURFQTtFQUNJLFdBQUE7RUFDQSxZQUFBO0VBQ0EsZUFBQTtFQUNBLFdBQUE7RUFDQSxpQkFBQTtFQUNBLFlBQUE7RUFDQSxlQUFBO0FDQ0o7O0FEQ0E7RUFDSSxhQUFBO0VBQ0EsWUFBQTtFQUNBLGdCQUFBO0VBQ0EsV0FBQTtFQUNBLGdCQUFBO0VBQ0Esa0JBQUE7RUFDQSx5QkFBQTtBQ0VKOztBRENBO0VBQ0ksVUFBQTtFQUNBLGlCQUFBO0VBQ0EsZ0JBQUE7RUFDQSxXQUFBO0VBQ0EsbUJBQUE7RUFDQSx5QkFBQTtBQ0VKIiwiZmlsZSI6InNyYy9hcHAvbG9naW4vbG9naW4ucGFnZS5zY3NzIiwic291cmNlc0NvbnRlbnQiOlsiaW9uLWNvbnRlbnQge1xuICAgIC0tb3ZlcmZsb3c6IGhpZGRlbjtcbn1cblxuI21haW4ge1xuICAgIGhlaWdodDogMTAwJTtcbiAgICBiYWNrZ3JvdW5kOiByZ2IoMjQ0LDE2NSwyMik7XG4gICAgYmFja2dyb3VuZDogbGluZWFyLWdyYWRpZW50KDBkZWcsIHJnYmEoMjQ0LDE2NSwyMiwwLjg3NTc4NzgxNTEyNjA1MDQpIDAlLCByZ2JhKDI1NSwyNTUsMjU1LDAuNDgwODI5ODMxOTMyNzczMDcpIDQ1JSk7XG59XG5cbiNsb2dvR2FyYWd7XG4gICAgd2lkdGg6IDk1JTtcbiAgICBmbG9hdDogbGVmdDtcbiAgICBtYXJnaW4tbGVmdDogMTVweDtcbiAgICB0ZXh0LWFsaWduOiBjZW50ZXI7XG4gICAgbWFyZ2luLXRvcDogNSU7XG4gICAgaGVpZ2h0OiAyMTBweDtcbn1cblxuaDF7XG4gICAgZm9udDpib2xkIDE2cHggVmVyZGFuYSwgQXJpYWw7XG4gICAgY29sb3I6IHJnYigxNTgsIDEyOSwgNDkpO1xuICAgIG1hcmdpbi1sZWZ0OiAxMHB4XG59XG5cbiNjcmVhdGVBY2NvdW50e1xuICAgIHdpZHRoOiA4MCU7XG4gICAgZmxvYXQ6IGxlZnQ7XG4gICAgbWFyZ2luLWxlZnQ6IDEwJTtcbn1cblxuI2ZhY2Vib29rQWNjb3VudHtcbiAgICAgd2lkdGg6IDgwJTtcbiAgICBmbG9hdDogbGVmdDtcbiAgICBtYXJnaW4tbGVmdDogMTAlO1xuICAgIG1hcmdpbi10b3A6IDE4cHhcbn1cblxuLnNoYWRvdy1idXR0b257XG4gICAgICAgIGJveC1zaGFkb3c6IDBweCAxNHB4IDI1cHggcmdiYSgxMDcsIDgyLCAxMywgMC41OSk7XG4gICAgICAgIGJvcmRlci1yYWRpdXM6IDUwcHg7XG4gfVxuXG4uaW9uLWNvbG9yLWNyZWF0ZSB7XG4gIC0taW9uLWNvbG9yLWJhc2U6ICNmMGIwMDA7XG4gIC0taW9uLWNvbG9yLWJhc2UtcmdiOiAyNDAsIDE3NiwgMDtcbiAgLS1pb24tY29sb3ItY29udHJhc3Q6ICMwODA3MDc3MztcbiAgLS1pb24tY29sb3ItY29udHJhc3QtcmdiOiAwLCAwLCAwO1xuICAtLWlvbi1jb2xvci1zaGFkZTogI2QzOWIwMDtcbiAgLS1pb24tY29sb3ItdGludDogI2YyYjgxYVxufVxuXG4uaW9uLWNvbG9yLWZhc2Uge1xuICAtLWlvbi1jb2xvci1iYXNlOiAjZjA4YTA0O1xuICAtLWlvbi1jb2xvci1iYXNlLXJnYjogMjQwLCAxNzYsIDA7XG4gIC0taW9uLWNvbG9yLWNvbnRyYXN0OiAjMDgwNzA3NzM7XG4gIC0taW9uLWNvbG9yLWNvbnRyYXN0LXJnYjogMCwgMCwgMDtcbiAgLS1pb24tY29sb3Itc2hhZGU6ICNkMzliMDA7XG4gIC0taW9uLWNvbG9yLXRpbnQ6ICNmMmI4MWFcbn1cblxuI2ljb25Qb2xpdGljYXtcbiAgICB3aWR0aDogMzVweDtcbiAgICBoZWlnaHQ6IDM1cHg7XG4gICAgbWFyZ2luLXRvcDogNXB4O1xuICAgIGZsb2F0OiBsZWZ0O1xuICAgIG1hcmdpbi1sZWZ0OiAxNXB4O1xuICAgIGNvbG9yOmdyZWVuO1xuICAgIGZvbnQtc2l6ZToyNXB4O1xufVxuI3Rlcm1vc1BvbGl0aWNhe1xuICAgIHdpZHRoOiA5NSVweDtcbiAgICBoZWlnaHQ6IDIwcHg7XG4gICAgbWFyZ2luLXRvcDogMTBweDtcbiAgICBmbG9hdDogbGVmdDtcbiAgICBtYXJnaW4tbGVmdDogNXB4O1xuICAgIHRleHQtYWxpZ246IGNlbnRlcjtcbiAgICBmb250OiAxMXB4IFZlcmRhbmEsIEFyaWFsO1xufVxuXG4jdGVybW9ze1xuICAgIHdpZHRoOiA5NSU7XG4gICAgbWFyZ2luLWxlZnQ6IDEwcHg7XG4gICAgbWFyZ2luLXRvcDogMjBweDtcbiAgICBmbG9hdDogbGVmdDtcbiAgICB0ZXh0LWFsaWduOiBqdXN0aWZ5O1xuICAgIGZvbnQ6MTJweCBWZXJkYW5hLEFyaWFsO1xufVxuIiwiaW9uLWNvbnRlbnQge1xuICAtLW92ZXJmbG93OiBoaWRkZW47XG59XG5cbiNtYWluIHtcbiAgaGVpZ2h0OiAxMDAlO1xuICBiYWNrZ3JvdW5kOiAjZjRhNTE2O1xuICBiYWNrZ3JvdW5kOiBsaW5lYXItZ3JhZGllbnQoMGRlZywgcmdiYSgyNDQsIDE2NSwgMjIsIDAuODc1Nzg3ODE1MSkgMCUsIHJnYmEoMjU1LCAyNTUsIDI1NSwgMC40ODA4Mjk4MzE5KSA0NSUpO1xufVxuXG4jbG9nb0dhcmFnIHtcbiAgd2lkdGg6IDk1JTtcbiAgZmxvYXQ6IGxlZnQ7XG4gIG1hcmdpbi1sZWZ0OiAxNXB4O1xuICB0ZXh0LWFsaWduOiBjZW50ZXI7XG4gIG1hcmdpbi10b3A6IDUlO1xuICBoZWlnaHQ6IDIxMHB4O1xufVxuXG5oMSB7XG4gIGZvbnQ6IGJvbGQgMTZweCBWZXJkYW5hLCBBcmlhbDtcbiAgY29sb3I6ICM5ZTgxMzE7XG4gIG1hcmdpbi1sZWZ0OiAxMHB4O1xufVxuXG4jY3JlYXRlQWNjb3VudCB7XG4gIHdpZHRoOiA4MCU7XG4gIGZsb2F0OiBsZWZ0O1xuICBtYXJnaW4tbGVmdDogMTAlO1xufVxuXG4jZmFjZWJvb2tBY2NvdW50IHtcbiAgd2lkdGg6IDgwJTtcbiAgZmxvYXQ6IGxlZnQ7XG4gIG1hcmdpbi1sZWZ0OiAxMCU7XG4gIG1hcmdpbi10b3A6IDE4cHg7XG59XG5cbi5zaGFkb3ctYnV0dG9uIHtcbiAgYm94LXNoYWRvdzogMHB4IDE0cHggMjVweCByZ2JhKDEwNywgODIsIDEzLCAwLjU5KTtcbiAgYm9yZGVyLXJhZGl1czogNTBweDtcbn1cblxuLmlvbi1jb2xvci1jcmVhdGUge1xuICAtLWlvbi1jb2xvci1iYXNlOiAjZjBiMDAwO1xuICAtLWlvbi1jb2xvci1iYXNlLXJnYjogMjQwLCAxNzYsIDA7XG4gIC0taW9uLWNvbG9yLWNvbnRyYXN0OiAjMDgwNzA3NzM7XG4gIC0taW9uLWNvbG9yLWNvbnRyYXN0LXJnYjogMCwgMCwgMDtcbiAgLS1pb24tY29sb3Itc2hhZGU6ICNkMzliMDA7XG4gIC0taW9uLWNvbG9yLXRpbnQ6ICNmMmI4MWEgO1xufVxuXG4uaW9uLWNvbG9yLWZhc2Uge1xuICAtLWlvbi1jb2xvci1iYXNlOiAjZjA4YTA0O1xuICAtLWlvbi1jb2xvci1iYXNlLXJnYjogMjQwLCAxNzYsIDA7XG4gIC0taW9uLWNvbG9yLWNvbnRyYXN0OiAjMDgwNzA3NzM7XG4gIC0taW9uLWNvbG9yLWNvbnRyYXN0LXJnYjogMCwgMCwgMDtcbiAgLS1pb24tY29sb3Itc2hhZGU6ICNkMzliMDA7XG4gIC0taW9uLWNvbG9yLXRpbnQ6ICNmMmI4MWEgO1xufVxuXG4jaWNvblBvbGl0aWNhIHtcbiAgd2lkdGg6IDM1cHg7XG4gIGhlaWdodDogMzVweDtcbiAgbWFyZ2luLXRvcDogNXB4O1xuICBmbG9hdDogbGVmdDtcbiAgbWFyZ2luLWxlZnQ6IDE1cHg7XG4gIGNvbG9yOiBncmVlbjtcbiAgZm9udC1zaXplOiAyNXB4O1xufVxuXG4jdGVybW9zUG9saXRpY2Ege1xuICB3aWR0aDogOTUlIHB4O1xuICBoZWlnaHQ6IDIwcHg7XG4gIG1hcmdpbi10b3A6IDEwcHg7XG4gIGZsb2F0OiBsZWZ0O1xuICBtYXJnaW4tbGVmdDogNXB4O1xuICB0ZXh0LWFsaWduOiBjZW50ZXI7XG4gIGZvbnQ6IDExcHggVmVyZGFuYSwgQXJpYWw7XG59XG5cbiN0ZXJtb3Mge1xuICB3aWR0aDogOTUlO1xuICBtYXJnaW4tbGVmdDogMTBweDtcbiAgbWFyZ2luLXRvcDogMjBweDtcbiAgZmxvYXQ6IGxlZnQ7XG4gIHRleHQtYWxpZ246IGp1c3RpZnk7XG4gIGZvbnQ6IDEycHggVmVyZGFuYSwgQXJpYWw7XG59Il19 */"
+module.exports = "ion-content {\n  --overflow: hidden;\n}\n\n#main {\n  height: 100%;\n  background: #f4a516;\n  background: -webkit-gradient(linear, left bottom, left top, from(rgba(244, 165, 22, 0.8757878151)), color-stop(45%, rgba(255, 255, 255, 0.4808298319)));\n  background: linear-gradient(0deg, rgba(244, 165, 22, 0.8757878151) 0%, rgba(255, 255, 255, 0.4808298319) 45%);\n}\n\n.ajustLogo {\n  width: 99%;\n  height: 150px;\n  float: left;\n  text-align: center;\n  margin-top: 55px;\n}\n\n.ajustH1 {\n  width: 99%;\n  height: 100px;\n  float: left;\n  text-align: center;\n  margin-top: 25px;\n}\n\n#logoGarag {\n  width: 95%;\n  height: 320px;\n  float: left;\n  margin-left: 15px;\n  text-align: center;\n}\n\nh1 {\n  font: bold 16px Verdana, Arial;\n  color: #9e8131;\n  margin-left: 10px;\n}\n\n#createAccount {\n  width: 80%;\n  height: 50px;\n  float: left;\n  margin-left: 10%;\n  margin-top: 20px;\n}\n\n#facebookAccount {\n  width: 80%;\n  height: 30px;\n  float: left;\n  margin-left: 10%;\n  margin-top: 18px;\n}\n\n.shadow-button {\n  box-shadow: 0px 14px 25px rgba(107, 82, 13, 0.59);\n  border-radius: 50px;\n}\n\n.ion-color-create {\n  --ion-color-base: #f0b000;\n  --ion-color-base-rgb: 240, 176, 0;\n  --ion-color-contrast: #08070773;\n  --ion-color-contrast-rgb: 0, 0, 0;\n  --ion-color-shade: #d39b00;\n  --ion-color-tint: #f2b81a ;\n}\n\n.ion-color-fase {\n  --ion-color-base: #f08a04;\n  --ion-color-base-rgb: 240, 176, 0;\n  --ion-color-contrast: #08070773;\n  --ion-color-contrast-rgb: 0, 0, 0;\n  --ion-color-shade: #d39b00;\n  --ion-color-tint: #f2b81a ;\n}\n\n#iconPolitica {\n  width: 35px;\n  height: 35px;\n  margin-top: 5px;\n  float: left;\n  margin-left: 15px;\n  color: green;\n  font-size: 25px;\n}\n\n#termosPolitica {\n  width: 95% px;\n  height: 20px;\n  margin-top: 10px;\n  float: left;\n  margin-left: 5px;\n  text-align: center;\n  font: 11px Verdana, Arial;\n}\n\n#termos {\n  width: 95%;\n  margin-left: 10px;\n  margin-top: 20px;\n  float: left;\n  text-align: justify;\n  font: 12px Verdana, Arial;\n}\n/*# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbIi93b3Jrc3BhY2UvZ2FyYWcvc3JjL2FwcC9sb2dpbi9sb2dpbi5wYWdlLnNjc3MiLCJzcmMvYXBwL2xvZ2luL2xvZ2luLnBhZ2Uuc2NzcyJdLCJuYW1lcyI6W10sIm1hcHBpbmdzIjoiQUFBQTtFQUNJLGtCQUFBO0FDQ0o7O0FERUE7RUFDSSxZQUFBO0VBQ0EsbUJBQUE7RUFDQSx1SkFBQTtFQUFBLDZHQUFBO0FDQ0o7O0FERUE7RUFDSSxVQUFBO0VBQ0EsYUFBQTtFQUNBLFdBQUE7RUFDQSxrQkFBQTtFQUNBLGdCQUFBO0FDQ0o7O0FERUE7RUFDSSxVQUFBO0VBQ0EsYUFBQTtFQUNBLFdBQUE7RUFDQSxrQkFBQTtFQUNBLGdCQUFBO0FDQ0o7O0FERUE7RUFDSSxVQUFBO0VBQ0EsYUFBQTtFQUNBLFdBQUE7RUFDQSxpQkFBQTtFQUNBLGtCQUFBO0FDQ0o7O0FERUE7RUFDSSw4QkFBQTtFQUNBLGNBQUE7RUFDQSxpQkFBQTtBQ0NKOztBREVBO0VBQ0ksVUFBQTtFQUNBLFlBQUE7RUFDQSxXQUFBO0VBQ0EsZ0JBQUE7RUFDQSxnQkFBQTtBQ0NKOztBREVBO0VBQ0ssVUFBQTtFQUNDLFlBQUE7RUFDRixXQUFBO0VBQ0EsZ0JBQUE7RUFDQSxnQkFBQTtBQ0NKOztBREVBO0VBQ1EsaURBQUE7RUFDQSxtQkFBQTtBQ0NSOztBREVBO0VBQ0UseUJBQUE7RUFDQSxpQ0FBQTtFQUNBLCtCQUFBO0VBQ0EsaUNBQUE7RUFDQSwwQkFBQTtFQUNBLDBCQUFBO0FDQ0Y7O0FERUE7RUFDRSx5QkFBQTtFQUNBLGlDQUFBO0VBQ0EsK0JBQUE7RUFDQSxpQ0FBQTtFQUNBLDBCQUFBO0VBQ0EsMEJBQUE7QUNDRjs7QURFQTtFQUNJLFdBQUE7RUFDQSxZQUFBO0VBQ0EsZUFBQTtFQUNBLFdBQUE7RUFDQSxpQkFBQTtFQUNBLFlBQUE7RUFDQSxlQUFBO0FDQ0o7O0FEQ0E7RUFDSSxhQUFBO0VBQ0EsWUFBQTtFQUNBLGdCQUFBO0VBQ0EsV0FBQTtFQUNBLGdCQUFBO0VBQ0Esa0JBQUE7RUFDQSx5QkFBQTtBQ0VKOztBRENBO0VBQ0ksVUFBQTtFQUNBLGlCQUFBO0VBQ0EsZ0JBQUE7RUFDQSxXQUFBO0VBQ0EsbUJBQUE7RUFDQSx5QkFBQTtBQ0VKIiwiZmlsZSI6InNyYy9hcHAvbG9naW4vbG9naW4ucGFnZS5zY3NzIiwic291cmNlc0NvbnRlbnQiOlsiaW9uLWNvbnRlbnQge1xuICAgIC0tb3ZlcmZsb3c6IGhpZGRlbjtcbn1cblxuI21haW4ge1xuICAgIGhlaWdodDogMTAwJTtcbiAgICBiYWNrZ3JvdW5kOiByZ2IoMjQ0LDE2NSwyMik7XG4gICAgYmFja2dyb3VuZDogbGluZWFyLWdyYWRpZW50KDBkZWcsIHJnYmEoMjQ0LDE2NSwyMiwwLjg3NTc4NzgxNTEyNjA1MDQpIDAlLCByZ2JhKDI1NSwyNTUsMjU1LDAuNDgwODI5ODMxOTMyNzczMDcpIDQ1JSk7XG59XG5cbi5hanVzdExvZ297XG4gICAgd2lkdGg6IDk5JTtcbiAgICBoZWlnaHQ6IDE1MHB4O1xuICAgIGZsb2F0OiBsZWZ0O1xuICAgIHRleHQtYWxpZ246IGNlbnRlcjtcbiAgICBtYXJnaW4tdG9wOiA1NXB4O1xufVxuXG4uYWp1c3RIMXtcbiAgICB3aWR0aDogOTklO1xuICAgIGhlaWdodDogMTAwcHg7XG4gICAgZmxvYXQ6IGxlZnQ7XG4gICAgdGV4dC1hbGlnbjogY2VudGVyO1xuICAgIG1hcmdpbi10b3A6IDI1cHg7XG59XG5cbiNsb2dvR2FyYWd7XG4gICAgd2lkdGg6IDk1JTtcbiAgICBoZWlnaHQ6IDMyMHB4O1xuICAgIGZsb2F0OiBsZWZ0O1xuICAgIG1hcmdpbi1sZWZ0OiAxNXB4O1xuICAgIHRleHQtYWxpZ246IGNlbnRlcjtcbn1cblxuaDF7XG4gICAgZm9udDpib2xkIDE2cHggVmVyZGFuYSwgQXJpYWw7XG4gICAgY29sb3I6IHJnYigxNTgsIDEyOSwgNDkpO1xuICAgIG1hcmdpbi1sZWZ0OiAxMHB4XG59XG5cbiNjcmVhdGVBY2NvdW50e1xuICAgIHdpZHRoOiA4MCU7XG4gICAgaGVpZ2h0OiA1MHB4O1xuICAgIGZsb2F0OiBsZWZ0O1xuICAgIG1hcmdpbi1sZWZ0OiAxMCU7XG4gICAgbWFyZ2luLXRvcDogMjBweDtcbn1cblxuI2ZhY2Vib29rQWNjb3VudHtcbiAgICAgd2lkdGg6IDgwJTtcbiAgICAgIGhlaWdodDogMzBweDtcbiAgICBmbG9hdDogbGVmdDtcbiAgICBtYXJnaW4tbGVmdDogMTAlO1xuICAgIG1hcmdpbi10b3A6IDE4cHhcbn1cblxuLnNoYWRvdy1idXR0b257XG4gICAgICAgIGJveC1zaGFkb3c6IDBweCAxNHB4IDI1cHggcmdiYSgxMDcsIDgyLCAxMywgMC41OSk7XG4gICAgICAgIGJvcmRlci1yYWRpdXM6IDUwcHg7XG4gfVxuXG4uaW9uLWNvbG9yLWNyZWF0ZSB7XG4gIC0taW9uLWNvbG9yLWJhc2U6ICNmMGIwMDA7XG4gIC0taW9uLWNvbG9yLWJhc2UtcmdiOiAyNDAsIDE3NiwgMDtcbiAgLS1pb24tY29sb3ItY29udHJhc3Q6ICMwODA3MDc3MztcbiAgLS1pb24tY29sb3ItY29udHJhc3QtcmdiOiAwLCAwLCAwO1xuICAtLWlvbi1jb2xvci1zaGFkZTogI2QzOWIwMDtcbiAgLS1pb24tY29sb3ItdGludDogI2YyYjgxYVxufVxuXG4uaW9uLWNvbG9yLWZhc2Uge1xuICAtLWlvbi1jb2xvci1iYXNlOiAjZjA4YTA0O1xuICAtLWlvbi1jb2xvci1iYXNlLXJnYjogMjQwLCAxNzYsIDA7XG4gIC0taW9uLWNvbG9yLWNvbnRyYXN0OiAjMDgwNzA3NzM7XG4gIC0taW9uLWNvbG9yLWNvbnRyYXN0LXJnYjogMCwgMCwgMDtcbiAgLS1pb24tY29sb3Itc2hhZGU6ICNkMzliMDA7XG4gIC0taW9uLWNvbG9yLXRpbnQ6ICNmMmI4MWFcbn1cblxuI2ljb25Qb2xpdGljYXtcbiAgICB3aWR0aDogMzVweDtcbiAgICBoZWlnaHQ6IDM1cHg7XG4gICAgbWFyZ2luLXRvcDogNXB4O1xuICAgIGZsb2F0OiBsZWZ0O1xuICAgIG1hcmdpbi1sZWZ0OiAxNXB4O1xuICAgIGNvbG9yOmdyZWVuO1xuICAgIGZvbnQtc2l6ZToyNXB4O1xufVxuI3Rlcm1vc1BvbGl0aWNhe1xuICAgIHdpZHRoOiA5NSVweDtcbiAgICBoZWlnaHQ6IDIwcHg7XG4gICAgbWFyZ2luLXRvcDogMTBweDtcbiAgICBmbG9hdDogbGVmdDtcbiAgICBtYXJnaW4tbGVmdDogNXB4O1xuICAgIHRleHQtYWxpZ246IGNlbnRlcjtcbiAgICBmb250OiAxMXB4IFZlcmRhbmEsIEFyaWFsO1xufVxuXG4jdGVybW9ze1xuICAgIHdpZHRoOiA5NSU7XG4gICAgbWFyZ2luLWxlZnQ6IDEwcHg7XG4gICAgbWFyZ2luLXRvcDogMjBweDtcbiAgICBmbG9hdDogbGVmdDtcbiAgICB0ZXh0LWFsaWduOiBqdXN0aWZ5O1xuICAgIGZvbnQ6MTJweCBWZXJkYW5hLEFyaWFsO1xufVxuIiwiaW9uLWNvbnRlbnQge1xuICAtLW92ZXJmbG93OiBoaWRkZW47XG59XG5cbiNtYWluIHtcbiAgaGVpZ2h0OiAxMDAlO1xuICBiYWNrZ3JvdW5kOiAjZjRhNTE2O1xuICBiYWNrZ3JvdW5kOiBsaW5lYXItZ3JhZGllbnQoMGRlZywgcmdiYSgyNDQsIDE2NSwgMjIsIDAuODc1Nzg3ODE1MSkgMCUsIHJnYmEoMjU1LCAyNTUsIDI1NSwgMC40ODA4Mjk4MzE5KSA0NSUpO1xufVxuXG4uYWp1c3RMb2dvIHtcbiAgd2lkdGg6IDk5JTtcbiAgaGVpZ2h0OiAxNTBweDtcbiAgZmxvYXQ6IGxlZnQ7XG4gIHRleHQtYWxpZ246IGNlbnRlcjtcbiAgbWFyZ2luLXRvcDogNTVweDtcbn1cblxuLmFqdXN0SDEge1xuICB3aWR0aDogOTklO1xuICBoZWlnaHQ6IDEwMHB4O1xuICBmbG9hdDogbGVmdDtcbiAgdGV4dC1hbGlnbjogY2VudGVyO1xuICBtYXJnaW4tdG9wOiAyNXB4O1xufVxuXG4jbG9nb0dhcmFnIHtcbiAgd2lkdGg6IDk1JTtcbiAgaGVpZ2h0OiAzMjBweDtcbiAgZmxvYXQ6IGxlZnQ7XG4gIG1hcmdpbi1sZWZ0OiAxNXB4O1xuICB0ZXh0LWFsaWduOiBjZW50ZXI7XG59XG5cbmgxIHtcbiAgZm9udDogYm9sZCAxNnB4IFZlcmRhbmEsIEFyaWFsO1xuICBjb2xvcjogIzllODEzMTtcbiAgbWFyZ2luLWxlZnQ6IDEwcHg7XG59XG5cbiNjcmVhdGVBY2NvdW50IHtcbiAgd2lkdGg6IDgwJTtcbiAgaGVpZ2h0OiA1MHB4O1xuICBmbG9hdDogbGVmdDtcbiAgbWFyZ2luLWxlZnQ6IDEwJTtcbiAgbWFyZ2luLXRvcDogMjBweDtcbn1cblxuI2ZhY2Vib29rQWNjb3VudCB7XG4gIHdpZHRoOiA4MCU7XG4gIGhlaWdodDogMzBweDtcbiAgZmxvYXQ6IGxlZnQ7XG4gIG1hcmdpbi1sZWZ0OiAxMCU7XG4gIG1hcmdpbi10b3A6IDE4cHg7XG59XG5cbi5zaGFkb3ctYnV0dG9uIHtcbiAgYm94LXNoYWRvdzogMHB4IDE0cHggMjVweCByZ2JhKDEwNywgODIsIDEzLCAwLjU5KTtcbiAgYm9yZGVyLXJhZGl1czogNTBweDtcbn1cblxuLmlvbi1jb2xvci1jcmVhdGUge1xuICAtLWlvbi1jb2xvci1iYXNlOiAjZjBiMDAwO1xuICAtLWlvbi1jb2xvci1iYXNlLXJnYjogMjQwLCAxNzYsIDA7XG4gIC0taW9uLWNvbG9yLWNvbnRyYXN0OiAjMDgwNzA3NzM7XG4gIC0taW9uLWNvbG9yLWNvbnRyYXN0LXJnYjogMCwgMCwgMDtcbiAgLS1pb24tY29sb3Itc2hhZGU6ICNkMzliMDA7XG4gIC0taW9uLWNvbG9yLXRpbnQ6ICNmMmI4MWEgO1xufVxuXG4uaW9uLWNvbG9yLWZhc2Uge1xuICAtLWlvbi1jb2xvci1iYXNlOiAjZjA4YTA0O1xuICAtLWlvbi1jb2xvci1iYXNlLXJnYjogMjQwLCAxNzYsIDA7XG4gIC0taW9uLWNvbG9yLWNvbnRyYXN0OiAjMDgwNzA3NzM7XG4gIC0taW9uLWNvbG9yLWNvbnRyYXN0LXJnYjogMCwgMCwgMDtcbiAgLS1pb24tY29sb3Itc2hhZGU6ICNkMzliMDA7XG4gIC0taW9uLWNvbG9yLXRpbnQ6ICNmMmI4MWEgO1xufVxuXG4jaWNvblBvbGl0aWNhIHtcbiAgd2lkdGg6IDM1cHg7XG4gIGhlaWdodDogMzVweDtcbiAgbWFyZ2luLXRvcDogNXB4O1xuICBmbG9hdDogbGVmdDtcbiAgbWFyZ2luLWxlZnQ6IDE1cHg7XG4gIGNvbG9yOiBncmVlbjtcbiAgZm9udC1zaXplOiAyNXB4O1xufVxuXG4jdGVybW9zUG9saXRpY2Ege1xuICB3aWR0aDogOTUlIHB4O1xuICBoZWlnaHQ6IDIwcHg7XG4gIG1hcmdpbi10b3A6IDEwcHg7XG4gIGZsb2F0OiBsZWZ0O1xuICBtYXJnaW4tbGVmdDogNXB4O1xuICB0ZXh0LWFsaWduOiBjZW50ZXI7XG4gIGZvbnQ6IDExcHggVmVyZGFuYSwgQXJpYWw7XG59XG5cbiN0ZXJtb3Mge1xuICB3aWR0aDogOTUlO1xuICBtYXJnaW4tbGVmdDogMTBweDtcbiAgbWFyZ2luLXRvcDogMjBweDtcbiAgZmxvYXQ6IGxlZnQ7XG4gIHRleHQtYWxpZ246IGp1c3RpZnk7XG4gIGZvbnQ6IDEycHggVmVyZGFuYSwgQXJpYWw7XG59Il19 */"
 
 /***/ }),
 
@@ -686,21 +701,139 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "LoginPage", function() { return LoginPage; });
 /* harmony import */ var tslib__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! tslib */ "./node_modules/tslib/tslib.es6.js");
 /* harmony import */ var _angular_core__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! @angular/core */ "./node_modules/@angular/core/fesm2015/core.js");
+/* harmony import */ var _ionic_angular__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! @ionic/angular */ "./node_modules/@ionic/angular/dist/fesm5.js");
+/* harmony import */ var _privacy_privacy_page__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ../privacy/privacy.page */ "./src/app/privacy/privacy.page.ts");
+
+
 
 
 let LoginPage = class LoginPage {
-    constructor() { }
+    constructor(modalCtrl) {
+        this.modalCtrl = modalCtrl;
+    }
+    movePrivacy() {
+        return tslib__WEBPACK_IMPORTED_MODULE_0__["__awaiter"](this, void 0, void 0, function* () {
+            const modal = yield this.modalCtrl.create({
+                component: _privacy_privacy_page__WEBPACK_IMPORTED_MODULE_3__["PrivacyPage"]
+            });
+            return yield modal.present();
+        });
+    }
     ngOnInit() {
     }
 };
+LoginPage.ctorParameters = () => [
+    { type: _ionic_angular__WEBPACK_IMPORTED_MODULE_2__["ModalController"] }
+];
 LoginPage = tslib__WEBPACK_IMPORTED_MODULE_0__["__decorate"]([
     Object(_angular_core__WEBPACK_IMPORTED_MODULE_1__["Component"])({
         selector: 'app-login',
         template: __webpack_require__(/*! raw-loader!./login.page.html */ "./node_modules/raw-loader/index.js!./src/app/login/login.page.html"),
         styles: [__webpack_require__(/*! ./login.page.scss */ "./src/app/login/login.page.scss")]
     }),
-    tslib__WEBPACK_IMPORTED_MODULE_0__["__metadata"]("design:paramtypes", [])
+    tslib__WEBPACK_IMPORTED_MODULE_0__["__metadata"]("design:paramtypes", [_ionic_angular__WEBPACK_IMPORTED_MODULE_2__["ModalController"]])
 ], LoginPage);
+
+
+
+/***/ }),
+
+/***/ "./src/app/privacy/privacy.module.ts":
+/*!*******************************************!*\
+  !*** ./src/app/privacy/privacy.module.ts ***!
+  \*******************************************/
+/*! exports provided: PrivacyPageModule */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "PrivacyPageModule", function() { return PrivacyPageModule; });
+/* harmony import */ var tslib__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! tslib */ "./node_modules/tslib/tslib.es6.js");
+/* harmony import */ var _angular_core__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! @angular/core */ "./node_modules/@angular/core/fesm2015/core.js");
+/* harmony import */ var _angular_common__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! @angular/common */ "./node_modules/@angular/common/fesm2015/common.js");
+/* harmony import */ var _angular_forms__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! @angular/forms */ "./node_modules/@angular/forms/fesm2015/forms.js");
+/* harmony import */ var _angular_router__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! @angular/router */ "./node_modules/@angular/router/fesm2015/router.js");
+/* harmony import */ var _ionic_angular__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! @ionic/angular */ "./node_modules/@ionic/angular/dist/fesm5.js");
+/* harmony import */ var _privacy_page__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! ./privacy.page */ "./src/app/privacy/privacy.page.ts");
+
+
+
+
+
+
+
+const routes = [
+    {
+        path: '',
+        component: _privacy_page__WEBPACK_IMPORTED_MODULE_6__["PrivacyPage"]
+    }
+];
+let PrivacyPageModule = class PrivacyPageModule {
+};
+PrivacyPageModule = tslib__WEBPACK_IMPORTED_MODULE_0__["__decorate"]([
+    Object(_angular_core__WEBPACK_IMPORTED_MODULE_1__["NgModule"])({
+        imports: [
+            _angular_common__WEBPACK_IMPORTED_MODULE_2__["CommonModule"],
+            _angular_forms__WEBPACK_IMPORTED_MODULE_3__["FormsModule"],
+            _ionic_angular__WEBPACK_IMPORTED_MODULE_5__["IonicModule"],
+            _angular_router__WEBPACK_IMPORTED_MODULE_4__["RouterModule"].forChild(routes)
+        ],
+        declarations: [_privacy_page__WEBPACK_IMPORTED_MODULE_6__["PrivacyPage"]]
+    })
+], PrivacyPageModule);
+
+
+
+/***/ }),
+
+/***/ "./src/app/privacy/privacy.page.scss":
+/*!*******************************************!*\
+  !*** ./src/app/privacy/privacy.page.scss ***!
+  \*******************************************/
+/*! no static exports found */
+/***/ (function(module, exports) {
+
+module.exports = "ion-header {\n  background-image: url('bannerTop.png');\n  background-repeat: no-repeat;\n  background-size: cover;\n  height: 100px;\n}\n\n.closeButton {\n  width: 99%;\n  height: 30px;\n  text-align: right;\n  margin-top: 15px;\n  margin-right: 5px;\n}\n\n.colorButton {\n  color: #000000;\n}\n\nh1 {\n  font: bold 20px Verdana, Arial;\n  color: #a1a0a0;\n  margin-left: 15px;\n  margin-top: 20px;\n}\n/*# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbIi93b3Jrc3BhY2UvZ2FyYWcvc3JjL2FwcC9wcml2YWN5L3ByaXZhY3kucGFnZS5zY3NzIiwic3JjL2FwcC9wcml2YWN5L3ByaXZhY3kucGFnZS5zY3NzIl0sIm5hbWVzIjpbXSwibWFwcGluZ3MiOiJBQUFBO0VBQ0ksc0NBQUE7RUFDQSw0QkFBQTtFQUNBLHNCQUFBO0VBQ0EsYUFBQTtBQ0NKOztBREVBO0VBQ0ksVUFBQTtFQUNBLFlBQUE7RUFDQSxpQkFBQTtFQUNBLGdCQUFBO0VBQ0EsaUJBQUE7QUNDSjs7QURFQTtFQUNJLGNBQUE7QUNDSjs7QURFQTtFQUNJLDhCQUFBO0VBQ0EsY0FBQTtFQUNBLGlCQUFBO0VBQ0EsZ0JBQUE7QUNDSiIsImZpbGUiOiJzcmMvYXBwL3ByaXZhY3kvcHJpdmFjeS5wYWdlLnNjc3MiLCJzb3VyY2VzQ29udGVudCI6WyJpb24taGVhZGVye1xuICAgIGJhY2tncm91bmQtaW1hZ2U6IHVybChcIi4uLy4uL2Fzc2V0cy9pbWcvYmFubmVyVG9wLnBuZ1wiKTtcbiAgICBiYWNrZ3JvdW5kLXJlcGVhdDogbm8tcmVwZWF0O1xuICAgIGJhY2tncm91bmQtc2l6ZTogY292ZXI7XG4gICAgaGVpZ2h0OiAxMDBweFxufVxuXG4uY2xvc2VCdXR0b257XG4gICAgd2lkdGg6IDk5JTtcbiAgICBoZWlnaHQ6IDMwcHg7XG4gICAgdGV4dC1hbGlnbjogcmlnaHQ7XG4gICAgbWFyZ2luLXRvcDogMTVweDtcbiAgICBtYXJnaW4tcmlnaHQ6IDVweFxufVxuXG4uY29sb3JCdXR0b257XG4gICAgY29sb3I6IzAwMDAwMDtcbn1cblxuaDF7XG4gICAgZm9udDogYm9sZCAyMHB4IFZlcmRhbmEsIEFyaWFsO1xuICAgIGNvbG9yOiByZ2IoMTYxLCAxNjAsIDE2MCk7XG4gICAgbWFyZ2luLWxlZnQ6IDE1cHg7XG4gICAgbWFyZ2luLXRvcDogMjBweDtcbn0iLCJpb24taGVhZGVyIHtcbiAgYmFja2dyb3VuZC1pbWFnZTogdXJsKFwiLi4vLi4vYXNzZXRzL2ltZy9iYW5uZXJUb3AucG5nXCIpO1xuICBiYWNrZ3JvdW5kLXJlcGVhdDogbm8tcmVwZWF0O1xuICBiYWNrZ3JvdW5kLXNpemU6IGNvdmVyO1xuICBoZWlnaHQ6IDEwMHB4O1xufVxuXG4uY2xvc2VCdXR0b24ge1xuICB3aWR0aDogOTklO1xuICBoZWlnaHQ6IDMwcHg7XG4gIHRleHQtYWxpZ246IHJpZ2h0O1xuICBtYXJnaW4tdG9wOiAxNXB4O1xuICBtYXJnaW4tcmlnaHQ6IDVweDtcbn1cblxuLmNvbG9yQnV0dG9uIHtcbiAgY29sb3I6ICMwMDAwMDA7XG59XG5cbmgxIHtcbiAgZm9udDogYm9sZCAyMHB4IFZlcmRhbmEsIEFyaWFsO1xuICBjb2xvcjogI2ExYTBhMDtcbiAgbWFyZ2luLWxlZnQ6IDE1cHg7XG4gIG1hcmdpbi10b3A6IDIwcHg7XG59Il19 */"
+
+/***/ }),
+
+/***/ "./src/app/privacy/privacy.page.ts":
+/*!*****************************************!*\
+  !*** ./src/app/privacy/privacy.page.ts ***!
+  \*****************************************/
+/*! exports provided: PrivacyPage */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "PrivacyPage", function() { return PrivacyPage; });
+/* harmony import */ var tslib__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! tslib */ "./node_modules/tslib/tslib.es6.js");
+/* harmony import */ var _angular_core__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! @angular/core */ "./node_modules/@angular/core/fesm2015/core.js");
+/* harmony import */ var _ionic_angular__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! @ionic/angular */ "./node_modules/@ionic/angular/dist/fesm5.js");
+
+
+
+let PrivacyPage = class PrivacyPage {
+    constructor(modalCtrl) {
+        this.modalCtrl = modalCtrl;
+    }
+    ngOnInit() {
+    }
+    closeModal() {
+        this.modalCtrl.dismiss();
+    }
+};
+PrivacyPage.ctorParameters = () => [
+    { type: _ionic_angular__WEBPACK_IMPORTED_MODULE_2__["ModalController"] }
+];
+PrivacyPage = tslib__WEBPACK_IMPORTED_MODULE_0__["__decorate"]([
+    Object(_angular_core__WEBPACK_IMPORTED_MODULE_1__["Component"])({
+        selector: 'app-privacy',
+        template: __webpack_require__(/*! raw-loader!./privacy.page.html */ "./node_modules/raw-loader/index.js!./src/app/privacy/privacy.page.html"),
+        styles: [__webpack_require__(/*! ./privacy.page.scss */ "./src/app/privacy/privacy.page.scss")]
+    }),
+    tslib__WEBPACK_IMPORTED_MODULE_0__["__metadata"]("design:paramtypes", [_ionic_angular__WEBPACK_IMPORTED_MODULE_2__["ModalController"]])
+], PrivacyPage);
 
 
 
