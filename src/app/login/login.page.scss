@@ -8,13 +8,28 @@ ion-content {
     background: linear-gradient(0deg, rgba(244,165,22,0.8757878151260504) 0%, rgba(255,255,255,0.48082983193277307) 45%);
 }
 
+.ajustLogo{
+    width: 99%;
+    height: 150px;
+    float: left;
+    text-align: center;
+    margin-top: 55px;
+}
+
+.ajustH1{
+    width: 99%;
+    height: 100px;
+    float: left;
+    text-align: center;
+    margin-top: 25px;
+}
+
 #logoGarag{
     width: 95%;
+    height: 320px;
     float: left;
     margin-left: 15px;
     text-align: center;
-    margin-top: 5%;
-    height: 210px;
 }
 
 h1{
@@ -25,12 +40,15 @@ h1{
 
 #createAccount{
     width: 80%;
+    height: 50px;
     float: left;
     margin-left: 10%;
+    margin-top: 20px;
 }
 
 #facebookAccount{
      width: 80%;
+      height: 30px;
     float: left;
     margin-left: 10%;
     margin-top: 18px
