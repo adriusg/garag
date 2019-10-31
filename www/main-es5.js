@@ -456,7 +456,7 @@ module.exports = webpackAsyncContext;
 /*! no static exports found */
 /***/ (function(module, exports) {
 
-module.exports = "<ion-app>\n  <ion-router-outlet></ion-router-outlet>\n</ion-app>\n"
+module.exports = "<ion-app>\n  <ion-router-outlet>\n  <div *ngIf=\"showSplash\" class=\"splash\">\n  <div class=\"spinner\">\n  <img src=\"../../assets/img/logoSplash.gif\" width=\"200px\" height=\"100px\"/>\n  </div>\n</div>\n  </ion-router-outlet>\n</ion-app>\n"
 
 /***/ }),
 
@@ -467,7 +467,7 @@ module.exports = "<ion-app>\n  <ion-router-outlet></ion-router-outlet>\n</ion-ap
 /*! no static exports found */
 /***/ (function(module, exports) {
 
-module.exports = "\n<ion-content>\n <div id=\"main\">\n    <div id=\"logoGarag\">\n\n          <div class=\"ajustLogo\"> <img src=\"../../assets/img/logo2.png\" width=\"200px\" height=\"100px\"/></div>\n\n         <div class=\"ajustH1\"> <h1>Dinheiro extra com sua Garagem.</h1></div>\n    </div>\n\n\n<div id=\"createAccount\">\n     <section>\n         <ion-button class=\"shadow-button\" expand=\"block\" shape=\"round\" color=\"create\"><strong>Crie sua Conta</strong></ion-button>\n      </section>\n  </div>\n\n\n<div id=\"facebookAccount\">\n     <section>\n         <ion-button class=\"shadow-button\" expand=\"block\" shape=\"round\" color=\"fase\">\n         <ion-icon ios=\"logo-facebook\" md=\"logo-facebook\"></ion-icon>\n          <strong> Continue com o Facebook</strong></ion-button>\n      </section>\n  </div>\n\n\n  </div>\n</ion-content>\n<ion-footer no-shadow>\n\t<ion-toolbar position=\"bottom\">\n    <div id=\"iconPolitica\">\n    <ion-icon name=\"checkmark-circle\" size=\"medium\"></ion-icon>\n    </div>\n\n\t\t<div id=\"termosPolitica\">\n       <a (click)=\"movePrivacy()\"> Aceito os Termos e Condições e a Política de Privacidade.</a>\n        </div>\n\t</ion-toolbar>\n</ion-footer>\n"
+module.exports = "\n<ion-content>\n <div id=\"main\">\n    <div id=\"logoGarag\">\n\n          <div class=\"ajustLogo\"> <img src=\"../../assets/img/logo2.png\" width=\"200px\" height=\"100px\"/></div>\n\n         <div class=\"ajustH1\"> <h1>Dinheiro extra com sua Garagem.</h1></div>\n    </div>\n\n\n<div id=\"createAccount\">\n     <section>\n         <ion-button class=\"shadow-button\" expand=\"block\" shape=\"round\" color=\"create\" (click)=\"CreateRecord()\"><strong>Crie sua Conta</strong></ion-button>\n      </section>\n  </div>\n\n\n<div id=\"facebookAccount\">\n     <section>\n         <ion-button class=\"shadow-button\" expand=\"block\" shape=\"round\" color=\"fase\">\n         <ion-icon ios=\"logo-facebook\" md=\"logo-facebook\"></ion-icon>\n          <strong> Continue com o Facebook</strong></ion-button>\n      </section>\n  </div>\n\n\n  </div>\n</ion-content>\n<ion-footer no-shadow>\n\t<ion-toolbar position=\"bottom\">\n    <div id=\"iconPolitica\">\n    <ion-icon name=\"checkmark-circle\" size=\"medium\"></ion-icon>\n    </div>\n\n\t\t<div id=\"termosPolitica\">\n       <a (click)=\"movePrivacy()\"> Aceito os Termos e Condições e a Política de Privacidade.</a>\n        </div>\n\t</ion-toolbar>\n</ion-footer>\n"
 
 /***/ }),
 
@@ -529,7 +529,7 @@ var AppRoutingModule = /** @class */ (function () {
 /*! no static exports found */
 /***/ (function(module, exports) {
 
-module.exports = "\n/*# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbXSwibmFtZXMiOltdLCJtYXBwaW5ncyI6IiIsImZpbGUiOiJzcmMvYXBwL2FwcC5jb21wb25lbnQuc2NzcyJ9 */"
+module.exports = ".splash {\n  position: absolute;\n  width: 100%;\n  height: 100%;\n  z-index: 999;\n  display: -webkit-box;\n  display: flex;\n  -webkit-box-align: center;\n          align-items: center;\n  -webkit-box-pack: center;\n          justify-content: center;\n  background: #ffffff;\n}\n/*# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbIi93b3Jrc3BhY2UvZ2FyYWcvc3JjL2FwcC9hcHAuY29tcG9uZW50LnNjc3MiLCJzcmMvYXBwL2FwcC5jb21wb25lbnQuc2NzcyJdLCJuYW1lcyI6W10sIm1hcHBpbmdzIjoiQUFBQTtFQUNJLGtCQUFBO0VBQ0EsV0FBQTtFQUNBLFlBQUE7RUFDQSxZQUFBO0VBQ0Esb0JBQUE7RUFBQSxhQUFBO0VBQ0EseUJBQUE7VUFBQSxtQkFBQTtFQUNBLHdCQUFBO1VBQUEsdUJBQUE7RUFDQSxtQkFBQTtBQ0NKIiwiZmlsZSI6InNyYy9hcHAvYXBwLmNvbXBvbmVudC5zY3NzIiwic291cmNlc0NvbnRlbnQiOlsiLnNwbGFzaCB7XG4gICAgcG9zaXRpb246IGFic29sdXRlO1xuICAgIHdpZHRoOiAxMDAlO1xuICAgIGhlaWdodDogMTAwJTtcbiAgICB6LWluZGV4OiA5OTk7XG4gICAgZGlzcGxheTogZmxleDtcbiAgICBhbGlnbi1pdGVtczogY2VudGVyO1xuICAgIGp1c3RpZnktY29udGVudDogY2VudGVyO1xuICAgIGJhY2tncm91bmQ6ICNmZmZmZmY7XG59XG5cbi5zcGlubmVyIHtcbiAgLy8geW91ciBhbmltYXRpb24gY29kZSAoU3BpbktpdCB1c2VkIGluIHRoaXMgZGVtbylcbn0iLCIuc3BsYXNoIHtcbiAgcG9zaXRpb246IGFic29sdXRlO1xuICB3aWR0aDogMTAwJTtcbiAgaGVpZ2h0OiAxMDAlO1xuICB6LWluZGV4OiA5OTk7XG4gIGRpc3BsYXk6IGZsZXg7XG4gIGFsaWduLWl0ZW1zOiBjZW50ZXI7XG4gIGp1c3RpZnktY29udGVudDogY2VudGVyO1xuICBiYWNrZ3JvdW5kOiAjZmZmZmZmO1xufSJdfQ== */"
 
 /***/ }),
 
@@ -548,6 +548,8 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _ionic_angular__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! @ionic/angular */ "./node_modules/@ionic/angular/dist/fesm5.js");
 /* harmony import */ var _ionic_native_splash_screen_ngx__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! @ionic-native/splash-screen/ngx */ "./node_modules/@ionic-native/splash-screen/ngx/index.js");
 /* harmony import */ var _ionic_native_status_bar_ngx__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! @ionic-native/status-bar/ngx */ "./node_modules/@ionic-native/status-bar/ngx/index.js");
+/* harmony import */ var rxjs__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! rxjs */ "./node_modules/rxjs/_esm5/index.js");
+
 
 
 
@@ -558,6 +560,7 @@ var AppComponent = /** @class */ (function () {
         this.platform = platform;
         this.splashScreen = splashScreen;
         this.statusBar = statusBar;
+        this.showSplash = true; // <-- show animation
         this.initializeApp();
     }
     AppComponent.prototype.initializeApp = function () {
@@ -565,6 +568,7 @@ var AppComponent = /** @class */ (function () {
         this.platform.ready().then(function () {
             _this.statusBar.styleDefault();
             _this.splashScreen.hide();
+            Object(rxjs__WEBPACK_IMPORTED_MODULE_5__["timer"])(6000).subscribe(function () { return _this.showSplash = false; }); // <-- hide animation after 3s
         });
     };
     AppComponent.ctorParameters = function () { return [
@@ -610,6 +614,14 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _app_component__WEBPACK_IMPORTED_MODULE_8__ = __webpack_require__(/*! ./app.component */ "./src/app/app.component.ts");
 /* harmony import */ var _login_login_module__WEBPACK_IMPORTED_MODULE_9__ = __webpack_require__(/*! ./login/login.module */ "./src/app/login/login.module.ts");
 /* harmony import */ var _privacy_privacy_module__WEBPACK_IMPORTED_MODULE_10__ = __webpack_require__(/*! ./privacy/privacy.module */ "./src/app/privacy/privacy.module.ts");
+/* harmony import */ var _angular_fire__WEBPACK_IMPORTED_MODULE_11__ = __webpack_require__(/*! @angular/fire */ "./node_modules/@angular/fire/index.js");
+/* harmony import */ var _angular_fire_database__WEBPACK_IMPORTED_MODULE_12__ = __webpack_require__(/*! @angular/fire/database */ "./node_modules/@angular/fire/database/index.js");
+/* harmony import */ var _environments_environment__WEBPACK_IMPORTED_MODULE_13__ = __webpack_require__(/*! ../environments/environment */ "./src/environments/environment.ts");
+/* harmony import */ var _angular_fire_firestore__WEBPACK_IMPORTED_MODULE_14__ = __webpack_require__(/*! @angular/fire/firestore */ "./node_modules/@angular/fire/firestore/index.js");
+
+
+
+
 
 
 
@@ -628,7 +640,10 @@ var AppModule = /** @class */ (function () {
         Object(_angular_core__WEBPACK_IMPORTED_MODULE_1__["NgModule"])({
             declarations: [_app_component__WEBPACK_IMPORTED_MODULE_8__["AppComponent"]],
             entryComponents: [],
-            imports: [_angular_platform_browser__WEBPACK_IMPORTED_MODULE_2__["BrowserModule"], _ionic_angular__WEBPACK_IMPORTED_MODULE_4__["IonicModule"].forRoot(), _app_routing_module__WEBPACK_IMPORTED_MODULE_7__["AppRoutingModule"], _login_login_module__WEBPACK_IMPORTED_MODULE_9__["LoginPageModule"], _privacy_privacy_module__WEBPACK_IMPORTED_MODULE_10__["PrivacyPageModule"]],
+            imports: [_angular_platform_browser__WEBPACK_IMPORTED_MODULE_2__["BrowserModule"], _ionic_angular__WEBPACK_IMPORTED_MODULE_4__["IonicModule"].forRoot(), _app_routing_module__WEBPACK_IMPORTED_MODULE_7__["AppRoutingModule"], _login_login_module__WEBPACK_IMPORTED_MODULE_9__["LoginPageModule"], _privacy_privacy_module__WEBPACK_IMPORTED_MODULE_10__["PrivacyPageModule"],
+                _angular_fire__WEBPACK_IMPORTED_MODULE_11__["AngularFireModule"].initializeApp(_environments_environment__WEBPACK_IMPORTED_MODULE_13__["environment"].firebase),
+                _angular_fire_firestore__WEBPACK_IMPORTED_MODULE_14__["AngularFirestoreModule"],
+                _angular_fire_database__WEBPACK_IMPORTED_MODULE_12__["AngularFireDatabaseModule"]],
             providers: [
                 _ionic_native_status_bar_ngx__WEBPACK_IMPORTED_MODULE_6__["StatusBar"],
                 _ionic_native_splash_screen_ngx__WEBPACK_IMPORTED_MODULE_5__["SplashScreen"],
@@ -720,13 +735,16 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _angular_core__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! @angular/core */ "./node_modules/@angular/core/fesm5/core.js");
 /* harmony import */ var _ionic_angular__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! @ionic/angular */ "./node_modules/@ionic/angular/dist/fesm5.js");
 /* harmony import */ var _privacy_privacy_page__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ../privacy/privacy.page */ "./src/app/privacy/privacy.page.ts");
+/* harmony import */ var _profile_service__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ./../profile.service */ "./src/app/profile.service.ts");
+
 
 
 
 
 var LoginPage = /** @class */ (function () {
-    function LoginPage(modalCtrl) {
+    function LoginPage(modalCtrl, profService) {
         this.modalCtrl = modalCtrl;
+        this.profService = profService;
     }
     LoginPage.prototype.movePrivacy = function () {
         return tslib__WEBPACK_IMPORTED_MODULE_0__["__awaiter"](this, void 0, void 0, function () {
@@ -746,8 +764,23 @@ var LoginPage = /** @class */ (function () {
     };
     LoginPage.prototype.ngOnInit = function () {
     };
+    LoginPage.prototype.CreateRecord = function () {
+        var _this = this;
+        var record = {};
+        record['Name'] = "Adriano Carvalho";
+        record['Email'] = "adriusg@gmail.com";
+        this.profService.create_Profile(record).then(function (resp) {
+            _this.name = "";
+            _this.email = "";
+            console.log(resp);
+        })
+            .catch(function (error) {
+            console.log(error);
+        });
+    };
     LoginPage.ctorParameters = function () { return [
-        { type: _ionic_angular__WEBPACK_IMPORTED_MODULE_2__["ModalController"] }
+        { type: _ionic_angular__WEBPACK_IMPORTED_MODULE_2__["ModalController"] },
+        { type: _profile_service__WEBPACK_IMPORTED_MODULE_4__["ProfileService"] }
     ]; };
     LoginPage = tslib__WEBPACK_IMPORTED_MODULE_0__["__decorate"]([
         Object(_angular_core__WEBPACK_IMPORTED_MODULE_1__["Component"])({
@@ -755,7 +788,7 @@ var LoginPage = /** @class */ (function () {
             template: __webpack_require__(/*! raw-loader!./login.page.html */ "./node_modules/raw-loader/index.js!./src/app/login/login.page.html"),
             styles: [__webpack_require__(/*! ./login.page.scss */ "./src/app/login/login.page.scss")]
         }),
-        tslib__WEBPACK_IMPORTED_MODULE_0__["__metadata"]("design:paramtypes", [_ionic_angular__WEBPACK_IMPORTED_MODULE_2__["ModalController"]])
+        tslib__WEBPACK_IMPORTED_MODULE_0__["__metadata"]("design:paramtypes", [_ionic_angular__WEBPACK_IMPORTED_MODULE_2__["ModalController"], _profile_service__WEBPACK_IMPORTED_MODULE_4__["ProfileService"]])
     ], LoginPage);
     return LoginPage;
 }());
@@ -869,6 +902,51 @@ var PrivacyPage = /** @class */ (function () {
 
 /***/ }),
 
+/***/ "./src/app/profile.service.ts":
+/*!************************************!*\
+  !*** ./src/app/profile.service.ts ***!
+  \************************************/
+/*! exports provided: ProfileService */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "ProfileService", function() { return ProfileService; });
+/* harmony import */ var tslib__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! tslib */ "./node_modules/tslib/tslib.es6.js");
+/* harmony import */ var _angular_core__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! @angular/core */ "./node_modules/@angular/core/fesm5/core.js");
+/* harmony import */ var _angular_fire_firestore__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! @angular/fire/firestore */ "./node_modules/@angular/fire/firestore/index.js");
+
+
+
+var ProfileService = /** @class */ (function () {
+    function ProfileService(firestore) {
+        this.firestore = firestore;
+    }
+    ProfileService.prototype.create_Profile = function (record) {
+        return this.firestore.collection('profile').add(record);
+    };
+    ProfileService.prototype.read_Profile = function () {
+        return this.firestore.collection('profile').snapshotChanges();
+    };
+    ProfileService.prototype.update_Profile = function (recordID, record) {
+        this.firestore.doc('profile/' + recordID).update(record);
+    };
+    ProfileService.ctorParameters = function () { return [
+        { type: _angular_fire_firestore__WEBPACK_IMPORTED_MODULE_2__["AngularFirestore"] }
+    ]; };
+    ProfileService = tslib__WEBPACK_IMPORTED_MODULE_0__["__decorate"]([
+        Object(_angular_core__WEBPACK_IMPORTED_MODULE_1__["Injectable"])({
+            providedIn: 'root'
+        }),
+        tslib__WEBPACK_IMPORTED_MODULE_0__["__metadata"]("design:paramtypes", [_angular_fire_firestore__WEBPACK_IMPORTED_MODULE_2__["AngularFirestore"]])
+    ], ProfileService);
+    return ProfileService;
+}());
+
+
+
+/***/ }),
+
 /***/ "./src/environments/environment.ts":
 /*!*****************************************!*\
   !*** ./src/environments/environment.ts ***!
@@ -883,7 +961,17 @@ __webpack_require__.r(__webpack_exports__);
 // `ng build --prod` replaces `environment.ts` with `environment.prod.ts`.
 // The list of file replacements can be found in `angular.json`.
 var environment = {
-    production: false
+    production: false,
+    firebase: {
+        apiKey: "AIzaSyCoKrm45ZBLMsifOFCtrOAN8n583aCQS8Q",
+        authDomain: "mgarag-a765f.firebaseapp.com",
+        databaseURL: "https://mgarag-a765f.firebaseio.com",
+        projectId: "mgarag-a765f",
+        storageBucket: "mgarag-a765f.appspot.com",
+        messagingSenderId: "650399225277",
+        appId: "1:650399225277:web:224eceba793d9ec3bd6ed4",
+        measurementId: "G-57T1WZYLVM"
+    }
 };
 /*
  * For easier debugging in development mode, you can import the following file
