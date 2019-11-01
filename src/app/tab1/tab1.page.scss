@@ -2,3 +2,22 @@
   max-height: 35vh;
   overflow: hidden;
 }
+
+.new-background-color{
+    --background: #fcc223;
+}
+
+.searchbar{
+    width: 250px;
+    float: left;
+    margin-left: 5px;
+}
+
+.searchbar-input {
+    background: #aa800c !important;
+    border-radius: 30px !important;
+    height: 40px !important;
+    max-width: 400px;
+    font-size: 1.25em !important;
+    border: 1px solid transparent;
+}
