@@ -1,1 +1,27 @@
+//ion-tab-button{
+//font-size: 10px;
+//--background-focused: orange;
+//--color-selected: orange;
+//--padding-end: 0px;
+//--padding-start: 10px;
+//--padding-bottom: 0px;
+//--margin-left:0px;
+//--margin-right:0px;
+//max-width:70px;
+//ion-icon{
+//    font-size: 35.5px;
+//}}
+
+ion-tab-button{
+font-size: 10px;
+ font-weight: bold;
+--background-focused: rgba(255, 166, 0, 0.76);
+--color-selected: rgba(255, 166, 0, 0.76);
+ion-icon{
+    font-size: 28.5px;
+}}
+
+ion-tab-bar{
+    border-top: 1px solid #ccc7c7
+}
 
