@@ -5,14 +5,7 @@
 export const environment = {
   production: false,
   firebase: {
-    apiKey: "AIzaSyCoKrm45ZBLMsifOFCtrOAN8n583aCQS8Q",
-    authDomain: "mgarag-a765f.firebaseapp.com",
-    databaseURL: "https://mgarag-a765f.firebaseio.com",
-    projectId: "mgarag-a765f",
-    storageBucket: "mgarag-a765f.appspot.com",
-    messagingSenderId: "650399225277",
-    appId: "1:650399225277:web:224eceba793d9ec3bd6ed4",
-    measurementId: "G-57T1WZYLVM"
+
   }
 };
 
