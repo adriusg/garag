@@ -24,3 +24,35 @@
 @import "~@ionic/angular/css/text-alignment.css";
 @import "~@ionic/angular/css/text-transformation.css";
 @import "~@ionic/angular/css/flex-utils.css";
+
+.searchbar-input {
+    background: #f1efe8 !important;
+    border-radius: 10px !important;
+    height: 40px !important;
+    width: 99%;
+    font-size: 0.90em !important;
+   border: 0 !important;
+    box-shadow: none !important;
+}
+
+.new-background-color{
+    --background: #f0b002;
+}
+
+.searchbar{
+    width: 85%;
+    float: left;
+    margin-left: 5px;
+}
+
+.iconFilter{
+   width: 10%;
+    float: left;
+    margin-left: 8px;
+    margin-top:15px;
+}
+
+.iconColorFilter{
+    color: white;
+     zoom: 1.3
+}

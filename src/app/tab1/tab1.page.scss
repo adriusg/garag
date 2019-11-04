@@ -3,21 +3,79 @@
   overflow: hidden;
 }
 
-.new-background-color{
-    --background: #fcc223;
+ion-card{
+    margin-top: 20px
 }
-
-.searchbar{
-    width: 250px;
+.cardImage{
+    width: 100%;
     float: left;
-    margin-left: 5px;
+    min-height: 130px;
 }
 
-.searchbar-input {
-    background: #aa800c !important;
-    border-radius: 30px !important;
-    height: 40px !important;
-    max-width: 400px;
-    font-size: 1.25em !important;
-    border: 1px solid transparent;
+.cardText{
+    width: 100%;
+    float: left;
+    border-top:1px solid rgb(221, 220, 220);
+    height: 33px;
+    margin-top:5px
+}
+
+.cardDescription{
+    width: 100%;
+    float: left;
+    min-height: 20px;
+    margin-top:5px
+}
+
+.iconCollation{
+    color: rgb(238, 183, 65);
+    margin-top: 5px;
+    margin-left: 6px
+}
+
+.imageCircle{
+    width: 13px;
+    height: 10px;
+    margin-top: 5px;
+    margin-left: 8px;
+    margin-right: 8px
+}
+
+.ajustTitle{
+    float: left;
+    height: 25px;
+}
+
+.ajustDescription{
+    float:right;
+    width: 45%;
+    text-align: right;
+    margin-right: 2px
+}
+
+.ajustDescriptionSale{
+    float:left;
+    width: 49%;
+    text-align: left;
+    margin-left: 2px
+}
+
+.titleValor{
+    font:bold 14px Verdana, Arial;
+    margin-top:5px
+}
+
+.titleMonthSale{
+    font: 10px Verdana,Arial;
+    margin-top:5px
+}
+
+.rating{
+    float: right;
+    margin-right: 2px;
+    font-size: 20px;
+}
+
+.iconRating{
+    color:rgb(248, 117, 117);
 }

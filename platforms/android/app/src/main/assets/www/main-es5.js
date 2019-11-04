@@ -8,19 +8,43 @@
 /***/ (function(module, exports, __webpack_require__) {
 
 var map = {
-	"./login/login.module": "./src/app/login/login.module.ts",
-	"./privacy/privacy.module": "./src/app/privacy/privacy.module.ts"
+	"./login/login.module": [
+		"./src/app/login/login.module.ts"
+	],
+	"./privacy/privacy.module": [
+		"./src/app/privacy/privacy.module.ts"
+	],
+	"./tab1/tab1.module": [
+		"./src/app/tab1/tab1.module.ts",
+		"tab1-tab1-module"
+	],
+	"./tab2/tab2.module": [
+		"./src/app/tab2/tab2.module.ts",
+		"tab2-tab2-module"
+	],
+	"./tab3/tab3.module": [
+		"./src/app/tab3/tab3.module.ts",
+		"tab3-tab3-module"
+	],
+	"./tab4/tab4.module": [
+		"./src/app/tab4/tab4.module.ts"
+	],
+	"./tabs/tabs.module": [
+		"./src/app/tabs/tabs.module.ts",
+		"tabs-tabs-module"
+	]
 };
-
 function webpackAsyncContext(req) {
-	return Promise.resolve().then(function() {
-		if(!__webpack_require__.o(map, req)) {
+	if(!__webpack_require__.o(map, req)) {
+		return Promise.resolve().then(function() {
 			var e = new Error("Cannot find module '" + req + "'");
 			e.code = 'MODULE_NOT_FOUND';
 			throw e;
-		}
+		});
+	}
 
-		var id = map[req];
+	var ids = map[req], id = ids[0];
+	return Promise.all(ids.slice(1).map(__webpack_require__.e)).then(function() {
 		return __webpack_require__(id);
 	});
 }
@@ -467,7 +491,7 @@ module.exports = "<ion-app>\n  <ion-router-outlet>\n  <div *ngIf=\"showSplash\" 
 /*! no static exports found */
 /***/ (function(module, exports) {
 
-module.exports = "\n<ion-content>\n <div id=\"main\">\n    <div id=\"logoGarag\">\n\n          <div class=\"ajustLogo\"> <img src=\"../../assets/img/logo2.png\" width=\"200px\" height=\"100px\"/></div>\n\n         <div class=\"ajustH1\"> <h1>Dinheiro extra com sua Garagem.</h1></div>\n    </div>\n\n\n<div id=\"createAccount\">\n     <section>\n         <ion-button class=\"shadow-button\" expand=\"block\" shape=\"round\" color=\"create\" (click)=\"CreateRecord()\"><strong>Crie sua Conta</strong></ion-button>\n      </section>\n  </div>\n\n\n<div id=\"facebookAccount\">\n     <section>\n         <ion-button class=\"shadow-button\" expand=\"block\" shape=\"round\" color=\"fase\">\n         <ion-icon ios=\"logo-facebook\" md=\"logo-facebook\"></ion-icon>\n          <strong> Continue com o Facebook</strong></ion-button>\n      </section>\n  </div>\n\n\n  </div>\n</ion-content>\n<ion-footer no-shadow>\n\t<ion-toolbar position=\"bottom\">\n    <div id=\"iconPolitica\">\n    <ion-icon name=\"checkmark-circle\" size=\"medium\"></ion-icon>\n    </div>\n\n\t\t<div id=\"termosPolitica\">\n       <a (click)=\"movePrivacy()\"> Aceito os Termos e Condições e a Política de Privacidade.</a>\n        </div>\n\t</ion-toolbar>\n</ion-footer>\n"
+module.exports = "\n<ion-content>\n <div id=\"main\">\n    <div id=\"logoGarag\">\n\n          <div class=\"ajustLogo\"> <img src=\"../../assets/img/logo2.png\" width=\"200px\" height=\"100px\"/></div>\n\n         <div class=\"ajustH1\"> <h1>Alugue ou Venda sua Garagem.</h1></div>\n    </div>\n\n\n<div id=\"createAccount\">\n     <section>\n         <ion-button class=\"shadow-button\" expand=\"block\" shape=\"round\" color=\"create\" (click)=\"CreateRecord()\"><strong>Crie sua Conta</strong></ion-button>\n      </section>\n  </div>\n\n\n<div id=\"facebookAccount\">\n     <section>\n         <ion-button class=\"shadow-button\" expand=\"block\" shape=\"round\" color=\"fase\" routerLink=\"/tabs\">\n         <ion-icon ios=\"logo-facebook\" md=\"logo-facebook\"></ion-icon>\n          <strong> Continue com o Facebook</strong></ion-button>\n      </section>\n  </div>\n\n\n  </div>\n</ion-content>\n<ion-footer no-shadow>\n\t<ion-toolbar position=\"bottom\">\n    <div id=\"iconPolitica\">\n    <ion-icon name=\"checkmark-circle\" size=\"medium\"></ion-icon>\n    </div>\n\n\t\t<div id=\"termosPolitica\">\n       <a (click)=\"movePrivacy()\"> Aceito os Termos e Condições e a Política de Privacidade.</a>\n        </div>\n\t</ion-toolbar>\n</ion-footer>\n"
 
 /***/ }),
 
@@ -479,6 +503,17 @@ module.exports = "\n<ion-content>\n <div id=\"main\">\n    <div id=\"logoGarag\"
 /***/ (function(module, exports) {
 
 module.exports = "<ion-header  no-border>\n <div class=\"closeButton\" (click)=\"closeModal()\">\n    <ion-icon name=\"close\" style=\"zoom:2.0;\" class=\"colorButton\"></ion-icon>\n </div>\n</ion-header>\n\n<ion-content>\n<h1>Termos e Condições de Uso da Plataforma \"Mobile Garage\"</h1>\n</ion-content>\n"
+
+/***/ }),
+
+/***/ "./node_modules/raw-loader/index.js!./src/app/tab4/tab4.page.html":
+/*!***************************************************************!*\
+  !*** ./node_modules/raw-loader!./src/app/tab4/tab4.page.html ***!
+  \***************************************************************/
+/*! no static exports found */
+/***/ (function(module, exports) {
+
+module.exports = "<ion-header>\n  <ion-toolbar>\n    <ion-title>tab4</ion-title>\n  </ion-toolbar>\n</ion-header>\n\n<ion-content>\n\n</ion-content>\n"
 
 /***/ }),
 
@@ -502,7 +537,13 @@ var routes = [
     { path: '', redirectTo: 'login', pathMatch: 'full' },
     { path: '', loadChildren: function () { return __webpack_require__.e(/*! import() | tabs-tabs-module */ "tabs-tabs-module").then(__webpack_require__.bind(null, /*! ./tabs/tabs.module */ "./src/app/tabs/tabs.module.ts")).then(function (m) { return m.TabsPageModule; }); } },
     { path: 'login', loadChildren: './login/login.module#LoginPageModule' },
-    { path: 'privacy', loadChildren: './privacy/privacy.module#PrivacyPageModule' }
+    { path: 'privacy', loadChildren: './privacy/privacy.module#PrivacyPageModule' },
+    { path: 'tab4', loadChildren: './tab4/tab4.module#Tab4PageModule' },
+    { path: '', loadChildren: './tabs/tabs.module#TabsPageModule' },
+    { path: 'tab1', loadChildren: './tab1/tab1.module#Tab1PageModule' },
+    { path: 'tab2', loadChildren: './tab2/tab2.module#Tab2PageModule' },
+    { path: 'tab3', loadChildren: './tab3/tab3.module#Tab3PageModule' },
+    { path: 'tab4', loadChildren: './tab4/tab4.module#Tab4PageModule' }
 ];
 var AppRoutingModule = /** @class */ (function () {
     function AppRoutingModule() {
@@ -614,10 +655,12 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _app_component__WEBPACK_IMPORTED_MODULE_8__ = __webpack_require__(/*! ./app.component */ "./src/app/app.component.ts");
 /* harmony import */ var _login_login_module__WEBPACK_IMPORTED_MODULE_9__ = __webpack_require__(/*! ./login/login.module */ "./src/app/login/login.module.ts");
 /* harmony import */ var _privacy_privacy_module__WEBPACK_IMPORTED_MODULE_10__ = __webpack_require__(/*! ./privacy/privacy.module */ "./src/app/privacy/privacy.module.ts");
-/* harmony import */ var _angular_fire__WEBPACK_IMPORTED_MODULE_11__ = __webpack_require__(/*! @angular/fire */ "./node_modules/@angular/fire/index.js");
-/* harmony import */ var _angular_fire_database__WEBPACK_IMPORTED_MODULE_12__ = __webpack_require__(/*! @angular/fire/database */ "./node_modules/@angular/fire/database/index.js");
-/* harmony import */ var _environments_environment__WEBPACK_IMPORTED_MODULE_13__ = __webpack_require__(/*! ../environments/environment */ "./src/environments/environment.ts");
-/* harmony import */ var _angular_fire_firestore__WEBPACK_IMPORTED_MODULE_14__ = __webpack_require__(/*! @angular/fire/firestore */ "./node_modules/@angular/fire/firestore/index.js");
+/* harmony import */ var _tab4_tab4_module__WEBPACK_IMPORTED_MODULE_11__ = __webpack_require__(/*! ./tab4/tab4.module */ "./src/app/tab4/tab4.module.ts");
+/* harmony import */ var _angular_fire__WEBPACK_IMPORTED_MODULE_12__ = __webpack_require__(/*! @angular/fire */ "./node_modules/@angular/fire/index.js");
+/* harmony import */ var _angular_fire_database__WEBPACK_IMPORTED_MODULE_13__ = __webpack_require__(/*! @angular/fire/database */ "./node_modules/@angular/fire/database/index.js");
+/* harmony import */ var _environments_environment__WEBPACK_IMPORTED_MODULE_14__ = __webpack_require__(/*! ../environments/environment */ "./src/environments/environment.ts");
+/* harmony import */ var _angular_fire_firestore__WEBPACK_IMPORTED_MODULE_15__ = __webpack_require__(/*! @angular/fire/firestore */ "./node_modules/@angular/fire/firestore/index.js");
+
 
 
 
@@ -640,10 +683,10 @@ var AppModule = /** @class */ (function () {
         Object(_angular_core__WEBPACK_IMPORTED_MODULE_1__["NgModule"])({
             declarations: [_app_component__WEBPACK_IMPORTED_MODULE_8__["AppComponent"]],
             entryComponents: [],
-            imports: [_angular_platform_browser__WEBPACK_IMPORTED_MODULE_2__["BrowserModule"], _ionic_angular__WEBPACK_IMPORTED_MODULE_4__["IonicModule"].forRoot(), _app_routing_module__WEBPACK_IMPORTED_MODULE_7__["AppRoutingModule"], _login_login_module__WEBPACK_IMPORTED_MODULE_9__["LoginPageModule"], _privacy_privacy_module__WEBPACK_IMPORTED_MODULE_10__["PrivacyPageModule"],
-                _angular_fire__WEBPACK_IMPORTED_MODULE_11__["AngularFireModule"].initializeApp(_environments_environment__WEBPACK_IMPORTED_MODULE_13__["environment"].firebase),
-                _angular_fire_firestore__WEBPACK_IMPORTED_MODULE_14__["AngularFirestoreModule"],
-                _angular_fire_database__WEBPACK_IMPORTED_MODULE_12__["AngularFireDatabaseModule"]],
+            imports: [_angular_platform_browser__WEBPACK_IMPORTED_MODULE_2__["BrowserModule"], _ionic_angular__WEBPACK_IMPORTED_MODULE_4__["IonicModule"].forRoot(), _app_routing_module__WEBPACK_IMPORTED_MODULE_7__["AppRoutingModule"], _login_login_module__WEBPACK_IMPORTED_MODULE_9__["LoginPageModule"], _privacy_privacy_module__WEBPACK_IMPORTED_MODULE_10__["PrivacyPageModule"], _tab4_tab4_module__WEBPACK_IMPORTED_MODULE_11__["Tab4PageModule"],
+                _angular_fire__WEBPACK_IMPORTED_MODULE_12__["AngularFireModule"].initializeApp(_environments_environment__WEBPACK_IMPORTED_MODULE_14__["environment"].firebase),
+                _angular_fire_firestore__WEBPACK_IMPORTED_MODULE_15__["AngularFirestoreModule"],
+                _angular_fire_database__WEBPACK_IMPORTED_MODULE_13__["AngularFireDatabaseModule"]],
             providers: [
                 _ionic_native_status_bar_ngx__WEBPACK_IMPORTED_MODULE_6__["StatusBar"],
                 _ionic_native_splash_screen_ngx__WEBPACK_IMPORTED_MODULE_5__["SplashScreen"],
@@ -941,6 +984,102 @@ var ProfileService = /** @class */ (function () {
         tslib__WEBPACK_IMPORTED_MODULE_0__["__metadata"]("design:paramtypes", [_angular_fire_firestore__WEBPACK_IMPORTED_MODULE_2__["AngularFirestore"]])
     ], ProfileService);
     return ProfileService;
+}());
+
+
+
+/***/ }),
+
+/***/ "./src/app/tab4/tab4.module.ts":
+/*!*************************************!*\
+  !*** ./src/app/tab4/tab4.module.ts ***!
+  \*************************************/
+/*! exports provided: Tab4PageModule */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "Tab4PageModule", function() { return Tab4PageModule; });
+/* harmony import */ var tslib__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! tslib */ "./node_modules/tslib/tslib.es6.js");
+/* harmony import */ var _angular_core__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! @angular/core */ "./node_modules/@angular/core/fesm5/core.js");
+/* harmony import */ var _angular_common__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! @angular/common */ "./node_modules/@angular/common/fesm5/common.js");
+/* harmony import */ var _angular_forms__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! @angular/forms */ "./node_modules/@angular/forms/fesm5/forms.js");
+/* harmony import */ var _angular_router__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! @angular/router */ "./node_modules/@angular/router/fesm5/router.js");
+/* harmony import */ var _ionic_angular__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! @ionic/angular */ "./node_modules/@ionic/angular/dist/fesm5.js");
+/* harmony import */ var _tab4_page__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! ./tab4.page */ "./src/app/tab4/tab4.page.ts");
+
+
+
+
+
+
+
+var routes = [
+    {
+        path: '',
+        component: _tab4_page__WEBPACK_IMPORTED_MODULE_6__["Tab4Page"]
+    }
+];
+var Tab4PageModule = /** @class */ (function () {
+    function Tab4PageModule() {
+    }
+    Tab4PageModule = tslib__WEBPACK_IMPORTED_MODULE_0__["__decorate"]([
+        Object(_angular_core__WEBPACK_IMPORTED_MODULE_1__["NgModule"])({
+            imports: [
+                _angular_common__WEBPACK_IMPORTED_MODULE_2__["CommonModule"],
+                _angular_forms__WEBPACK_IMPORTED_MODULE_3__["FormsModule"],
+                _ionic_angular__WEBPACK_IMPORTED_MODULE_5__["IonicModule"],
+                _angular_router__WEBPACK_IMPORTED_MODULE_4__["RouterModule"].forChild(routes)
+            ],
+            declarations: [_tab4_page__WEBPACK_IMPORTED_MODULE_6__["Tab4Page"]]
+        })
+    ], Tab4PageModule);
+    return Tab4PageModule;
+}());
+
+
+
+/***/ }),
+
+/***/ "./src/app/tab4/tab4.page.scss":
+/*!*************************************!*\
+  !*** ./src/app/tab4/tab4.page.scss ***!
+  \*************************************/
+/*! no static exports found */
+/***/ (function(module, exports) {
+
+module.exports = "\n/*# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbXSwibmFtZXMiOltdLCJtYXBwaW5ncyI6IiIsImZpbGUiOiJzcmMvYXBwL3RhYjQvdGFiNC5wYWdlLnNjc3MifQ== */"
+
+/***/ }),
+
+/***/ "./src/app/tab4/tab4.page.ts":
+/*!***********************************!*\
+  !*** ./src/app/tab4/tab4.page.ts ***!
+  \***********************************/
+/*! exports provided: Tab4Page */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "Tab4Page", function() { return Tab4Page; });
+/* harmony import */ var tslib__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! tslib */ "./node_modules/tslib/tslib.es6.js");
+/* harmony import */ var _angular_core__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! @angular/core */ "./node_modules/@angular/core/fesm5/core.js");
+
+
+var Tab4Page = /** @class */ (function () {
+    function Tab4Page() {
+    }
+    Tab4Page.prototype.ngOnInit = function () {
+    };
+    Tab4Page = tslib__WEBPACK_IMPORTED_MODULE_0__["__decorate"]([
+        Object(_angular_core__WEBPACK_IMPORTED_MODULE_1__["Component"])({
+            selector: 'app-tab4',
+            template: __webpack_require__(/*! raw-loader!./tab4.page.html */ "./node_modules/raw-loader/index.js!./src/app/tab4/tab4.page.html"),
+            styles: [__webpack_require__(/*! ./tab4.page.scss */ "./src/app/tab4/tab4.page.scss")]
+        }),
+        tslib__WEBPACK_IMPORTED_MODULE_0__["__metadata"]("design:paramtypes", [])
+    ], Tab4Page);
+    return Tab4Page;
 }());
 
 
