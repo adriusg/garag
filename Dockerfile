@@ -2,9 +2,9 @@ FROM gitpod/workspace-full:latest
 
 USER root
 
-RUN apt-get update \
-    && apt-get install -y default-jdk \
-    && apt-get clean && rm -rf /var/cache/apt/* && rm -rf /var/lib/apt/lists/* && rm -rf /tmp/*
+RUN bash -c ". /home/gitpod/.sdkman/bin/sdkman-init.sh \
+             && sdk install java 8.0.242.hs-adpt \
+             && sdk default java 8.0.242.hs-adpt"
 
 
  ENV ANDROID_SDK_ROOT /home/gitpod
@@ -82,11 +82,6 @@ RUN mkdir -p /home/gitpod/rocksetta/logs                        \
 # ----install Cordova and qrcode, could also install ionic here
 
 RUN npm --prefix /home/gitpod/rocksetta/qrcode-cordova install cordova qrcode
-
-
-
-
-
 
 
 #USER root
